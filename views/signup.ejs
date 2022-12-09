@@ -1,0 +1,207 @@
+
+
+<html>
+    <head>
+        <style>
+                    @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+
+body {
+	background-image: url("https://img.freepik.com/free-vector/mountain-watercolor-view-background_52683-24633.jpg?w=2000");
+    overflow-y: hidden;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.card {
+margin-top: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+  width: 400px;
+  height: fit-content;
+  background-color: #ffffff;
+  padding: 10px 30px;
+}
+
+.card_title {
+  text-align: center;
+  padding: 10px;
+}
+
+.card_title h1 {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.form input {
+  margin: 10px 0;
+  width: 100%;
+  background-color: #e2e2e2;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+}
+
+.form button {
+  background-color: #4796ff;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 15px;
+  width: 100%;
+}
+
+.card_terms {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.card_terms input[type="checkbox"] {
+  background-color: #e2e2e2;
+}
+
+.card_terms span {
+  margin: 5px;
+  font-size: 13px;
+}
+
+.card a {
+  color: #4796ff;
+  text-decoration: none;
+}
+  
+.login__field{
+	width: 100%;
+	height: fit-content;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+
+}
+
+.signup_homeb{
+	height: fit-content;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+}
+
+
+
+        </style>
+    </head>
+    <body>
+
+
+
+		<div class="container">
+			<div class="card">
+			  <div class="card_title">
+				<h1>Create Account</h1>
+				<span>Already have an account? <a href="/login">LOGIN</a></span>
+			  </div>
+			  <div class="form">
+				<form action="/signup-form" method="POST">
+				<input  required type="text" name="name" id="name" class="login__input" placeholder="name">
+				<input  required type="text" name="username" id="username"  placeholder="User name">
+				<input  required type="password" name="password" id="password"  placeholder="Password">
+				<input  required type="text" name="contact" id="contact"  placeholder="Contact">
+
+				<div class="login__field">
+					Male
+					<input type="radio" value="male" name="gender" id="male" required>
+					Female
+					<input type="radio" value="female" name="gender" id="female" required>
+				</div>
+
+
+
+
+
+
+
+
+				
+
+				<button type="submit">Sign Up</button>
+				<div class="signup_homeb">
+					<a  href="/">HOME</a>	
+				</div>
+				</form>
+			  </div>
+			  
+			</div>
+		  </div>
+
+
+
+
+
+
+        <!-- <% if(locals.err_msg) { %>
+        <div class="alert alert-danger" role="alert"><%= err_msg %></div>
+        <% } %>
+        
+                    <form class="login" action="/signup-form" method="POST">
+                        <div class="login__field">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="text" name="name" id="name" class="login__input" placeholder="name">
+                        </div>
+                        <div class="login__field">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="text" name="username" id="username" class="login__input" placeholder="User name">
+                        </div>
+                        <div class="login__field">
+                            <i class="login__icon fas fa-lock"></i>
+                            <input type="password" name="password" id="password" class="login__input" placeholder="Password">
+                        </div>
+                        <div class="login__field">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="text" name="contact" id="contact" class="login__input" placeholder="Contact">
+                        </div>
+                        <div class="login__field">
+                            Male
+                            <input type="radio" value="male" name="gender" id="male" required>
+                            Female
+                            <input type="radio" value="female" name="gender" id="female" required>
+                        </div>
+                        <button class="button login__submit" type="submit">
+                            <span class="button__text">Sign Up Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                        </button>
+                        <div style="width:100%;height:fit-content;text-align: center;margin-top: 1rem;">
+                            <a style="background-color:white;text-decoration:none;color:black;padding:8px;border-radius:1rem" href="/login">LOGIN</a>	
+                        </div>
+                        <div style="width:100%;height:fit-content;text-align: center;margin-top: 2rem;">
+                            <a style="background-color:white;text-decoration:none;color:black;padding:8px;border-radius:1rem" href="/">HOME</a>	
+                        </div>
+                    </form>
+                 -->
+
+
+        
+    </body>
+</html>

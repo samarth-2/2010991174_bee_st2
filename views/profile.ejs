@@ -1,0 +1,266 @@
+<html>
+    <head>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
+
+
+body{
+  background-image: url("https://images.pexels.com/photos/1881621/pexels-photo-1881621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+ font-family: "Poppins", sans-serif;
+ font-weight: 300;
+ height:fit-content;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: flex-start;
+
+
+
+
+
+ background-repeat: no-repeat;
+                
+                background-size: cover;
+
+
+
+
+
+}
+
+
+.profile_outer{
+  height: fit-content;
+  width: 50%;
+  background-color: white;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+}
+
+.profile_image{
+  height: fit-content;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.image{
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+.profile_card{
+  height: fit-content;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  /* margin-bottom: 1rem; */
+}
+
+.profile_card_left{
+  width: 20%;
+
+}
+
+.profile_pass{
+  height: fit-content;
+  width: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5rem;
+  padding: 1rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.pass__field{
+  width: 100%;
+  
+  align-items: center;
+  justify-content: flex-start;
+  height: fit-content;
+  font-size: 1rem;
+  display: flex;
+}
+
+.pass__input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #2885BE;
+}
+
+.stats{
+  height: fit-content;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  
+}
+.profile_change{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: fit-content;
+
+
+}
+
+.button{
+  width: 10rem;
+  font-size: 1.2rem;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  background-color: #2885BE;
+  border-radius: 5px;
+  text-decoration: none;
+  border: none;
+  margin-bottom: 2rem;
+}
+
+        </style>
+    </head>
+    <body>
+      <% if(locals.err_msg) { %>
+      <div class="alert alert-danger" role="alert"><%= err_msg %></div>
+      <% } %>
+
+        <div class="profile_outer">
+          <div class="profile_image">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" class="image" >
+          </div>
+          <div class="profile_pass">
+            USER PROFILE
+          </div>
+          <div class="profile_card">
+            <div class="profile_card_left">
+              Name :
+            </div>
+            <div class="profile_card_right">
+              <%= result[0].name %>
+            </div>
+          </div>
+
+          <div class="profile_card">
+            <div class="profile_card_left">
+             Username:
+            </div>
+            <div class="profile_card_right">
+              <%= result[0].username %>
+            </div>
+          </div>
+          <div class="profile_card">
+            <div class="profile_card_left">
+             Contact:
+            </div>
+            <div class="profile_card_right">
+              <%= result[0].contact %>
+            </div>
+          </div>
+          <div class="profile_card">
+            <div class="profile_card_left">
+             Gender:
+            </div>
+            <div class="profile_card_right">
+              <%= result[0].gender %>
+            </div>
+          </div>
+
+          <div class="profile_pass">
+            CHANGE PASSWORD
+          </div>
+
+          <div class="profile_change">
+            <form  action="/change-pass-form" method="POST">
+              <div class="pass__field">
+                  <input type="text" name="oldpass" id="oldpass" class="pass__input" placeholder="Current Password" required>
+              </div>
+              <div class="pass__field">
+                  <input type="text" name="newpass" id="newpass" class="pass__input" placeholder="New Password" required>
+                </div>
+                <div class="pass__field">
+                  <input type="text" name="conpass" id="conpass" class="pass__input" placeholder="Confirm Password" required>
+              </div>
+              <div class="stats" >
+                <button  class="button" type="submit">Change Pass</button>
+              </div>
+            </form>
+            
+          </div>
+          <div class="stats" >
+            <a href="/" class="button" >HOME</a>
+          </div>
+        </div>
+        
+
+      <!-- <div class="container d-flex justify-content-center align-items-center">   
+        <div class="card">
+         <div class="upper">
+           
+         </div>
+         <div class="user text-center">
+           <div class="profile">
+             <img src="data:image/jpeg;base64,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" class="image" width="80">
+           </div>
+         </div>
+         <div class="mt-5 text-center">
+           <h4 class="mb-0"><%= result[0].name %></h4>
+           <div class="d-flex justify-content-between align-items-center mt-4 px-4">
+             <div class="stats">
+               <h6 class="mb-0">Username</h6>
+               <span><%= result[0].username %></span>
+             </div>
+             <div class="stats">
+               <h6 class="mb-0">Contact</h6>
+               <span><%= result[0].contact %></span>
+             </div>
+             <div class="stats">
+               <h6 class="mb-0">Gender</h6>
+               <span><%= result[0].gender %></span>
+             </div>
+             <div class="stats">
+              <h4 class="mb-0">Change Password : </h4>
+            </div>
+            <form class="login" action="/change-pass-form" method="POST">
+              <div class="login__field">
+                  <input type="text" name="oldpass" id="oldpass" class="login__input" placeholder="Current Password" required>
+              </div>
+              <div class="login__field">
+                  <input type="text" name="newpass" id="newpass" class="login__input" placeholder="New Password" required>
+                </div>
+                <div class="login__field">
+                  <input type="text" name="conpass" id="conpass" class="login__input" placeholder="Confirm Password" required>
+              </div>
+              <div class="stats" >
+                <button  class="button" type="submit">Change Pass</button>
+              </div>
+            </form>
+              <div class="stats" >
+                <a href="/" class="button" >HOME</a>
+              </div>
+           </div>
+         </div>        
+        </div>
+      </div> -->
+    </body>
+</html>

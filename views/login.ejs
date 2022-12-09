@@ -1,0 +1,162 @@
+<html>
+    <head>
+        <style>
+        @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+
+body {
+  background-image: url("https://img.freepik.com/free-vector/mountain-watercolor-view-background_52683-24633.jpg?w=2000");
+  font-family: Raleway, sans-serif;
+  color: #666;
+}
+
+.login {
+  margin: 20px auto;
+  padding: 40px 50px;
+  max-width: 300px;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 1px 1px 1px #666;
+}
+  .login input {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin: 10px 0;
+    padding: 14px 12px;
+    font-size: 16px;
+    border-radius: 2px; 
+    font-family: Raleway, sans-serif;
+  }
+
+.login input[type=text],
+.login input[type=password] {
+  border: 1px solid #c0c0c0;
+  transition: .2s;
+}
+
+.login input[type=text]:hover {
+  border-color: #2885BE;
+  outline: none;
+  transition: all .2s ease-in-out;
+} 
+
+.login input[type=submit] {
+  border: none;
+  background: #2885BE;
+  color: white;
+  font-weight: bold;  
+  transition: 0.2s;
+  margin: 20px 0px;
+}
+
+.login input[type=submit]:hover {
+  background: #2885BE;  
+}
+
+  .login h2 {
+    margin: 20px 0 0; 
+    color: #2885BE;
+    font-size: 28px;
+  }
+
+.login p {
+  margin-bottom: 40px;
+}
+
+.links {
+  display: table;
+  width: 100%;  
+  box-sizing: border-box;
+  border-top: 1px solid #c0c0c0;
+  margin-bottom: 10px;
+}
+
+.links a {
+  display: table-cell;
+  padding-top: 10px;
+}
+
+.links a:first-child {
+  text-align: left;
+}
+
+.links a:last-child {
+  text-align: right;
+}
+
+  .login h2,
+  .login p,
+  .login a {
+    text-align: center;    
+  }
+
+.login a {
+  text-decoration: none;  
+  font-size: .8em;
+}
+
+.login a:visited {
+  color: inherit;
+}
+
+.login a:hover {
+  text-decoration: underline;
+}   
+
+.login__submit{
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #2885BE;
+	color: white;
+	border: none;
+	padding: 1rem;
+	
+}
+        </style>
+    </head>
+    <body>
+
+		<form class="login" action="/login-form" method="POST">
+			<h2>Welcome, User!</h2>
+			<p>Please log in</p>
+			<input  required type="text" name="username" id="username" class="login__input" placeholder="User name">
+			<input  required type="password" name="password" id="password" class="login__input" placeholder="Password">
+			<!-- <input type="submit" value="Log In" /> -->
+
+
+			<button class="login__submit" type="submit">
+				<span class="button__text">Log In Now</span>
+			</button>
+			<div class="links">
+				<a style="background-color:white;text-decoration:none;color:black;padding:8px;border-radius:1rem" href="/signup">SIGN UP</a>
+				<a style="background-color:white;text-decoration:none;color:black;padding:8px;border-radius:1rem" href="/">HOME</a>
+			</div>
+		  </form>
+
+        
+                    <!-- <form class="login" action="/login-form" method="POST">
+                        <div class="login__field">
+                            <i class="login__icon fas fa-user"></i>
+                            <input type="text" name="username" id="username" class="login__input" placeholder="User name">
+                        </div>
+                        <div class="login__field">
+                            <i class="login__icon fas fa-lock"></i>
+                            <input type="password" name="password" id="password" class="login__input" placeholder="Password">
+                        </div>
+                        <button class="button login__submit" type="submit">
+                            <span class="button__text">Log In Now</span>
+                            <i class="button__icon fas fa-chevron-right"></i>
+                        </button>
+                        <div style="width:100%;height:fit-content;text-align: center;margin-top: 1rem;">
+                            <a style="background-color:white;text-decoration:none;color:black;padding:8px;border-radius:1rem" href="/signup">SIGN UP</a>	
+                        </div>
+                        <div style="width:100%;height:fit-content;text-align: center;margin-top: 2rem;">
+                            <a style="background-color:white;text-decoration:none;color:black;padding:8px;border-radius:1rem" href="/">HOME</a>	
+                        </div>
+                    </form> -->
+                
+    </body>
+</html>
